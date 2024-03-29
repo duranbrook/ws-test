@@ -8,3 +8,6 @@ ValidateEnv();
 const app = new App([new UserRoute(), new AuthRoute()]);
 
 app.listen();
+process.on("exit", (code) => {
+    console.log(code);
+});
